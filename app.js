@@ -22,20 +22,21 @@ import ReactDOM from "react-dom/client";
 
 const RestaurantCarts = (props) =>{
     const {resData} = props; //optimize it
-    const {name, cuisines, costForTwo, sla.deli}
+    const {name, cuisines, costForTwo, avgRating} = resData?.info;
+    const {deliveryTime} = resData?.info?.sla;
     return (
         <div className="res-cart">
             <img className="res-logo" alt="res-logo" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+ resData.info.cloudinaryImageId}></img>
-            <h3>{resData.info.name}</h3>
-            <h4>{resData.info.cuisines.join(", ")}</h4>
-            <h4>{resData.info.costForTwo}</h4>
-            <h4>{resData.info.avgRating} Star</h4>
-            <h4>{resData.info.sla.deliveryTime+" Minute"}</h4>
+            <h3>{name}</h3>
+            <h4>{cuisines.join(", ")}</h4>
+            <h4>{costForTwo}</h4>
+            <h4>{avgRating} Star</h4>
+            <h4>{deliveryTime+" Minute"}</h4>
         </div>
     )
 }
 
-const resObj = [
+const resList = [
     {
         "info": {
           "id": "882432",
@@ -2125,17 +2126,11 @@ const Body = () =>{
         <div className="body">
             <div className="search">Search</div>
             <div className="res-container">
-                <RestaurantCarts resData = {resObj[0]} />
-                <RestaurantCarts resData = {resObj[1]} />
-                <RestaurantCarts resData = {resObj[2]} />
-                <RestaurantCarts resData = {resObj[3]} />
-                <RestaurantCarts resData = {resObj[4]} />
-                <RestaurantCarts resData = {resObj[5]} />
-                <RestaurantCarts resData = {resObj[6]} />
-                <RestaurantCarts resData = {resObj[7]} />
-                <RestaurantCarts resData = {resObj[8]} />
-                <RestaurantCarts resData = {resObj[9]} />
-                <RestaurantCarts resData = {resObj[10]} />
+                {
+                    resList.map( (restaurant) =>(
+                        <RestaurantCarts key={restaurant.info.id} resData={restaurant}/>
+                    ))
+                }
             </div>
         </div>
     )

@@ -1,0 +1,49 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+.nav-items > ul{
+    display: flex;
+    padding: 10px 20px;
+    list-style-type: none;
+}
+
+.nav-items > ul > li{
+    font-size: 24px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.logo-img{
+    height: 105px;
+    width: 100px;
+    padding-left: 10px;
+}
+
+.res-cart{
+    background-color: cornsilk;
+    margin: 5px;
+    padding: 5px;
+    width: 200px;
+    height: 300px;
+}
+
+.res-cart:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.search{
+    padding: 10px;
+}
+
+.res-logo{
+    width: 100%;
+}
+
+.res-container{
+    display: flex;
+    flex-wrap: wrap;
+}

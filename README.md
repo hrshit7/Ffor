@@ -41,4 +41,10 @@
 # React Hooks 
 (Normal Js Utility Function)
   - useState() => Super Powerful React variable
-  - useEffect()
+  - useEffect() => used to get data from servers and rerender on the webpage
+
+# React Fiber
+  - concept of Rerendering
+
+# Shimmer
+ - for better experience of visitors

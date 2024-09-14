@@ -1,112 +1,21 @@
-const resList = [
+let resList = [
     {
         "info": {
-          "id": "882432",
+          "id": "88243",
           "name": "Theobroma",
           "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/7/22/7b64fb9a-5d88-4108-87c2-b953e9f5c0bb_882432.jpg",
-          "locality": "Near Janjeerwala Square",
-          "areaName": "Darshan Mall, Race Course Rd",
           "costForTwo": "₹300 for two",
           "cuisines": [
             "Bakery",
             "Desserts",
             "Beverages"
           ],
-          "avgRating": 4.6,
-          "parentId": "1040",
-          "avgRatingString": "4.6",
-          "totalRatingsString": "243",
+          "avgRating": 3.8,
           "sla": {
-            "deliveryTime": 35,
-            "lastMileTravel": 5.9,
-            "serviceability": "SERVICEABLE",
-            "slaString": "30-35 mins",
-            "lastMileTravelString": "5.9 km",
-            "iconType": "ICON_TYPE_EMPTY"
+            "deliveryTime": 35
           },
-          "availability": {
-            "nextCloseTime": "2024-09-14 00:00:00",
-            "opened": true
-          },
-          "badges": {
-            "imageBadges": [
-              {
-                "imageId": "Green%20Dot%20Awards/Best%20In%20Desserts.png",
-                "description": "Delivery!"
-              },
-              {
-                "imageId": "newg.png",
-                "description": "Gourmet"
-              }
-            ]
-          },
-          "isOpen": true,
-          "type": "F",
-          "badgesV2": {
-            "entityBadges": {
-              "imageBased": {
-                "badgeObject": [
-                  {
-                    "attributes": {
-                      "description": "Delivery!",
-                      "imageId": "Green%20Dot%20Awards/Best%20In%20Desserts.png"
-                    }
-                  },
-                  {
-                    "attributes": {
-                      "description": "Gourmet",
-                      "imageId": "newg.png"
-                    }
-                  }
-                ]
-              },
-              "textBased": {
-
-              },
-              "textExtendedBadges": {
-
-              }
-            }
-          },
-          "aggregatedDiscountInfoV3": {
-            "header": "ITEMS",
-            "subHeader": "AT ₹99"
-          },
-          "differentiatedUi": {
-            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-            "differentiatedUiMediaDetails": {
-              "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-              "lottie": {
-
-              },
-              "video": {
-
-              }
-            }
-          },
-          "reviewsSummary": {
-
-          },
-          "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-          "isNewlyOnboarded": true,
-          "restaurantOfferPresentationInfo": {
-
-          },
-          "externalRatings": {
-            "aggregatedRating": {
-              "rating": "--"
-            }
-          },
-          "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-
-        },
-        "cta": {
-          "link": "https://www.swiggy.com/city/indore/theobroma-near-janjeerwala-square-darshan-mall-race-course-rd-rest882432",
-          "type": "WEBLINK"
-        }
       },
+    },
       {
         "info": {
           "id": "64708",
@@ -121,7 +30,7 @@ const resList = [
             "South Indian",
             "Beverages"
           ],
-          "avgRating": 4.5,
+          "avgRating": 4,
           "parentId": "108938",
           "avgRatingString": "4.5",
           "totalRatingsString": "25K+",
@@ -262,7 +171,7 @@ const resList = [
             "Desserts",
             "Beverages"
           ],
-          "avgRating": 4.1,
+          "avgRating": 3.5,
           "parentId": "2",
           "avgRatingString": "4.1",
           "totalRatingsString": "645",
@@ -360,7 +269,7 @@ const resList = [
             "Cafe",
             "Desserts"
           ],
-          "avgRating": 4.4,
+          "avgRating": 2,
           "parentId": "630",
           "avgRatingString": "4.4",
           "totalRatingsString": "16K+",
@@ -471,7 +380,7 @@ const resList = [
             "Healthy Food",
             "Sweets"
           ],
-          "avgRating": 4.4,
+          "avgRating": 4.8,
           "veg": true,
           "parentId": "354819",
           "avgRatingString": "4.4",
@@ -1086,7 +995,7 @@ const resList = [
             "Desserts",
             "Beverages"
           ],
-          "avgRating": 4.2,
+          "avgRating": 3.5,
           "parentId": "8496",
           "avgRatingString": "4.2",
           "totalRatingsString": "710",
@@ -1172,7 +1081,7 @@ const resList = [
             "Desserts",
             "Beverages"
           ],
-          "avgRating": 4.5,
+          "avgRating": 3.9,
           "parentId": "4444",
           "avgRatingString": "4.5",
           "totalRatingsString": "1.5K+",
@@ -1262,7 +1171,7 @@ const resList = [
             "Bakery",
             "Fast Food"
           ],
-          "avgRating": 4.5,
+          "avgRating": 2,
           "parentId": "1",
           "avgRatingString": "4.5",
           "totalRatingsString": "416",
@@ -1348,7 +1257,7 @@ const resList = [
             "Desserts",
             "Healthy Food"
           ],
-          "avgRating": 4.5,
+          "avgRating": 3.5,
           "veg": true,
           "parentId": "268997",
           "avgRatingString": "4.5",
@@ -1434,7 +1343,7 @@ const resList = [
             "Fast Food",
             "Snacks"
           ],
-          "avgRating": 4.1,
+          "avgRating": 3.1,
           "parentId": "1557",
           "avgRatingString": "4.1",
           "totalRatingsString": "1.1K+",
@@ -1520,7 +1429,7 @@ const resList = [
             "Pastas",
             "Desserts"
           ],
-          "avgRating": 4.2,
+          "avgRating": 3.1,
           "parentId": "2456",
           "avgRatingString": "4.2",
           "totalRatingsString": "197",
@@ -1643,7 +1552,7 @@ const resList = [
             "Desserts",
             "Ice Cream"
           ],
-          "avgRating": 4.5,
+          "avgRating": 3,
           "veg": true,
           "parentId": "5588",
           "avgRatingString": "4.5",
@@ -1753,7 +1662,7 @@ const resList = [
             "Thalis",
             "Punjabi"
           ],
-          "avgRating": 4.4,
+          "avgRating": 2.4,
           "veg": true,
           "parentId": "7049",
           "avgRatingString": "4.4",
@@ -1854,7 +1763,7 @@ const resList = [
             "Ice Cream",
             "Desserts"
           ],
-          "avgRating": 4.8,
+          "avgRating": 1,
           "veg": true,
           "parentId": "2093",
           "avgRatingString": "4.8",
@@ -1974,7 +1883,7 @@ const resList = [
             "Desserts",
             "Beverages"
           ],
-          "avgRating": 4.4,
+          "avgRating": 3.7,
           "parentId": "4961",
           "avgRatingString": "4.4",
           "totalRatingsString": "5.8K+",

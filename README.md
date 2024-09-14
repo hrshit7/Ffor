@@ -34,3 +34,11 @@
 
  export const Component;
  import {Component} from "path";
+
+
+
+
+# React Hooks 
+(Normal Js Utility Function)
+  - useState() => Super Powerful React variable
+  - useEffect()

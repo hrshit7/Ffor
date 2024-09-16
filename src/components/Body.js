@@ -30,7 +30,7 @@ const Body = () =>{
                 <input type="text" className="search-text" value={searchText} onChange={(e)=> {setSearchText(e.target.value);}}/>
                 <button className="search-btn" onClick={()=>{
                     filterRes = listOfRestaurants.filter(
-                    (res)=> res.info.cuisines.toLowerCase().includes(searchText.toLowerCase())
+                    (res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase())
                     );
                     setSearchedList(filterRes);
                 }}>Search</button>

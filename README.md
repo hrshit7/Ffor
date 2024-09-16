@@ -48,3 +48,7 @@
 
 # Shimmer
  - for better experience of visitors
+
+# Types of Routing 
+ - Client Side = No need to fetch, beacuse all components already fetched.
+ - Server Side = if we have to make call to server and the page loads.

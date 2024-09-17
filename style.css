@@ -23,7 +23,7 @@
 }
 
 .res-cart{
-    background-color: cornsilk;
+    background-color: rgb(246, 233, 235);
     margin: 15px;
     padding: 5px;
     width: 200px;
@@ -82,4 +82,41 @@
 
 .button{
     display: flex;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+.res-header{
+    color: red;
+    text-align: center;
+}
+
+.items{
+    background-color: rgb(246, 233, 235);
+    margin: 15px;
+    padding: 5px;
+    width: 200px;
+}
+
+.items:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.item-logo{
+    width: 100%;
+    height: 200px;
+}
+
+.prra{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-cart{
+    display: flex;
+    flex-wrap: wrap;
 }

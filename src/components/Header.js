@@ -11,14 +11,14 @@ const Header = () =>{
         <div className="header">
             <div className="logo-container">
                 <div className="logo">
-                    <img className="logo-img" src={LOGO_IMG}></img>
+                <Link to="/" className="link"><img className="logo-img" src={LOGO_IMG}></img></Link>
                 </div>
             </div>
             <div className="nav-items">
                 <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/About">About Us</Link></li>
-                    <li><Link to="/Contact">Contact Us</Link></li>
+                    <li><Link to="/" className="link">Home</Link></li>
+                    <li><Link to="/About" className="link">About Us</Link></li>
+                    <li><Link to="/Contact" className="link">Contact Us</Link></li>
                     <li>Cart</li>
                     <button className="log-btn" onClick={()=>{
                         return logBtn == "Login" ? 

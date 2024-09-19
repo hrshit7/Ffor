@@ -2,6 +2,7 @@ import RestaurantCarts from "./RestaurantCarts";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useStatus from "../utils/useStatus";
 
 const Body = () =>{
 
@@ -21,6 +22,11 @@ const Body = () =>{
         setlistofRestaurants(json?.data?.cards[4].card?.card?.gridElements?.infoWithStyle?.restaurants);
         setSearchedList(json?.data?.cards[4].card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
+
+    const status = useStatus();
+    if(status==false){
+       return ( <h1>Connection Lost!!!!!</h1>)
+    }
 
     return listOfRestaurants == 0 ?(
         <Shimmer/>

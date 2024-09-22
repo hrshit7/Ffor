@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import MenuItems , {VegMenuItems} from "./MenuItem";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import NewItems from "./NewItems";
+import { useState } from "react";
 
 const RestaurantMenu = ()=>{
 
@@ -11,6 +12,8 @@ const RestaurantMenu = ()=>{
     const menu = useRestaurantMenu(resid);
     
     const EnhancedMenuItems = VegMenuItems(MenuItems);
+
+    const [showIndex, setShowIndex] = useState(null)
 
     if(menu==null){
         return <Shimmer/>;
@@ -37,7 +40,13 @@ const RestaurantMenu = ()=>{
         </div>
         </div>
         <div className="text-center">
-            {newItems?.map((item)=> <NewItems key={item?.card?.card.title} data = {item?.card?.card}/>)}
+            {newItems?.map((item, index)=> <NewItems 
+            key={item?.card?.card.title} 
+            data = {item?.card?.card}
+            accordian = {index == showIndex ? true : false}
+            setShowIndex = {()=> {setShowIndex(index)}}
+            />
+            )}
         </div>
 
     </div>

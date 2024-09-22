@@ -1,11 +1,10 @@
 import { useState } from "react";
 import ItemList from "./ItemList";
 
-const NewItems = ({data})=>{
+const NewItems = ({data, accordian, setShowIndex})=>{
 
-    const [accordian, setAccordian] = useState(false);
     const handleClick = ()=>{
-        setAccordian(!accordian);
+        setShowIndex();
     }
     
     return (

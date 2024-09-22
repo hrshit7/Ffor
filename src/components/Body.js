@@ -1,4 +1,4 @@
-import RestaurantCarts from "./RestaurantCarts";
+import RestaurantCarts, {FastRestaurantsCarts} from "./RestaurantCarts";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -11,6 +11,10 @@ const Body = () =>{
     const [searchedList , setSearchedList] = useState([]);
 
     const [searchText, setSearchText] = useState("");
+
+    console.log(listOfRestaurants);
+
+    const EnhancedRestaurantCarts = FastRestaurantsCarts(RestaurantCarts);
 
     useEffect(()=>{
         fetchData();
@@ -32,33 +36,37 @@ const Body = () =>{
         <Shimmer/>
     ) : (
         <div className="body">
-            <div className="button">
-            <div className="search">
-                <input type="text" className="search-text" value={searchText} onChange={(e)=> {setSearchText(e.target.value);}}/>
-                <button className="search-btn" onClick={()=>{
+            <div className="button flex">
+            <div className="search m-4 p-4">
+                <input type="text" className="border border-solid border-black italic" value={searchText} onChange={(e)=> {setSearchText(e.target.value);}}/>
+                <button className="search-btn px-4 py-2 bg-green-100 m-4 rounded-lg" onClick={()=>{
                     filterRes = listOfRestaurants.filter(
                     (res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase())
                     );
                     setSearchedList(filterRes);
                 }}>Search</button>
             </div>
-                <button 
-                className="filter-btn" 
+            <div className="m-4 p-4 flex items-center">
+            <button 
+                className="filter-btn px-4 py-2 bg-gray-100 rounded-lg hover:bottom hover:bottom-solid hover:bottom-black" 
                 onClick={()=>{
                     filteredList =listOfRestaurants.filter(
                         (res) => res.info.avgRating > 4
                     )
-                    setlistofRestaurants(filteredList);
+                    setSearchedList(filteredList);
                 }}
                 >
                     Top Rated Restaurants
                 </button>
             </div>
-            <div className="res-container">
+            </div>
+            <div className="flex flex-wrap ">
                 {
                     searchedList.map( (restaurant) =>(
                         <Link className="link" to={"/restaurantmenu/" + restaurant.info.id} key={restaurant.info.id}>
-                            <RestaurantCarts resData={restaurant}/>
+                            {restaurant?.info?.sla?.deliveryTime <= 40 ?
+                            <EnhancedRestaurantCarts resData={restaurant}/> :
+                            <RestaurantCarts resData={restaurant}/> }
                         </Link>
                     ))
                 }

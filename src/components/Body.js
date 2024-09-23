@@ -1,8 +1,9 @@
 import RestaurantCarts, {FastRestaurantsCarts} from "./RestaurantCarts";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useStatus from "../utils/useStatus";
+import Logged from "../utils/Logged";
 
 const Body = () =>{
 
@@ -12,7 +13,7 @@ const Body = () =>{
 
     const [searchText, setSearchText] = useState("");
 
-    console.log(listOfRestaurants);
+    const user = useContext(Logged);
 
     const EnhancedRestaurantCarts = FastRestaurantsCarts(RestaurantCarts);
 
@@ -36,6 +37,7 @@ const Body = () =>{
         <Shimmer/>
     ) : (
         <div className="body">
+            <h1 className="m-2 p-2 font-bold text-lg">welcome 🎊, {user.loggedUser}</h1>
             <div className="button flex">
             <div className="search m-4 p-4">
                 <input type="text" className="border border-solid border-black italic" value={searchText} onChange={(e)=> {setSearchText(e.target.value);}}/>

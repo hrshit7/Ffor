@@ -44,7 +44,7 @@ const RestaurantMenu = ()=>{
             key={item?.card?.card.title} 
             data = {item?.card?.card}
             accordian = {index == showIndex ? true : false}
-            setShowIndex = {()=> {setShowIndex(index)}}
+            setShowIndex = {()=> {setShowIndex((preIndex) => (preIndex == index ? null : index))}}
             />
             )}
         </div>

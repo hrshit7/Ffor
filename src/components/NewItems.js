@@ -4,6 +4,7 @@ import ItemList from "./ItemList";
 const NewItems = ({data, accordian, setShowIndex})=>{
 
     const handleClick = ()=>{
+        accordian = null;
         setShowIndex();
     }
     

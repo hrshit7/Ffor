@@ -28,6 +28,8 @@ const Body = () =>{
         setSearchedList(json?.data?.cards[4].card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
 
+    const {setNewUser, loggedUser} = useContext(Logged);
+
     const status = useStatus();
     if(status==false){
        return ( <h1>Connection Lost!!!!!</h1>)
@@ -60,6 +62,9 @@ const Body = () =>{
                 >
                     Top Rated Restaurants
                 </button>
+            </div>
+            <div className="m-4 p-4 flex items-center">
+                <h1>User: <input className="border border-black" value={loggedUser} onChange={(e)=>setNewUser(e.target.value)}></input></h1>
             </div>
             </div>
             <div className="flex flex-wrap ">

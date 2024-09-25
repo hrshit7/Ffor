@@ -52,3 +52,11 @@
 # Types of Routing 
  - Client Side = No need to fetch, beacuse all components already fetched.
  - Server Side = if we have to make call to server and the page loads.
+
+# Redux toolkit
+- Install @reduxjs/toolkit  and react-redux
+- Build our own store
+- connect our store to our app
+- Slice(cartSlice)
+- Dispatch(action)
+- Selector

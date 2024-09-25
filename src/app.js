@@ -8,6 +8,8 @@ import Contact from "./components/Contant";
 import Errorpage from "./components/Errorpage";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Logged from "./utils/Logged";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
 
 const Grocery = lazy(()=>import("./components/Grocery"))
 
@@ -26,12 +28,14 @@ useEffect(()=>{
 }, []);
 
     return (
+    <Provider store={appStore}>
     <Logged.Provider value={{loggedUser: newUser, setNewUser}}>
     <div className="app">
         <Header/>
         <Outlet/>
     </div>
     </Logged.Provider>
+    </Provider>
     )
 }
 

@@ -3,6 +3,7 @@ import { LOGO_IMG } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useStatus from "../utils/useStatus";
 import Logged from "../utils/Logged";
+import { useSelector } from "react-redux";
 
 const Header = () =>{
 
@@ -12,7 +13,8 @@ const Header = () =>{
     const status = useStatus();
 
     const user = useContext(Logged);
- 
+
+    const cartItems = useSelector((store)=> store.cart.items);
     
 
     return (
@@ -31,8 +33,8 @@ const Header = () =>{
                     <li className="px-4 hover:bg-red-400 hover:shadow-lg hover:rounded-md"><Link to="/About" className="link">About Us</Link></li>
                     <li className="px-4 hover:bg-red-400 hover:shadow-lg hover:rounded-md"><Link to="/Contact" className="link">Contact Us</Link></li>
                     <li className="px-4 hover:bg-red-400 hover:shadow-lg hover:rounded-md"><Link to="/Grocery" className="link">Grocery</Link></li>
-                    <li className="px-4 hover:bg-red-400 hover:shadow-lg hover:rounded-md">Cart</li>
-                    <button className="px-2 bg-green-200 rounded-lg" onClick={()=>{
+                    <li className="px-4 font-bold">🛒({cartItems.length})</li>
+                    <button className="mx-4 px-1 bg-green-200 rounded-md" onClick={()=>{
                         return logBtn == "Login" ? 
                         (setLogBtn("Logout")) : (setLogBtn("Login"))
                     }}>{logBtn}</button>

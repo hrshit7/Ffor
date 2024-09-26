@@ -15,8 +15,8 @@ const Header = () =>{
     const user = useContext(Logged);
 
     const cartItems = useSelector((store)=> store.cart.items);
+    console.log(cartItems);
     
-
     return (
         <div className="flex justify-between bg-red-50 shadow-lg m-2">
             <div className="w-36">
@@ -33,7 +33,7 @@ const Header = () =>{
                     <li className="px-4 hover:bg-red-400 hover:shadow-lg hover:rounded-md"><Link to="/About" className="link">About Us</Link></li>
                     <li className="px-4 hover:bg-red-400 hover:shadow-lg hover:rounded-md"><Link to="/Contact" className="link">Contact Us</Link></li>
                     <li className="px-4 hover:bg-red-400 hover:shadow-lg hover:rounded-md"><Link to="/Grocery" className="link">Grocery</Link></li>
-                    <li className="px-4 font-bold">🛒({cartItems.length})</li>
+                    <li className="px-4 font-bold"><Link to="/cart" >🛒({cartItems.length})</Link></li>
                     <button className="mx-4 px-1 bg-green-200 rounded-md" onClick={()=>{
                         return logBtn == "Login" ? 
                         (setLogBtn("Logout")) : (setLogBtn("Login"))

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import ItemList from "./ItemList";
 
 const NewItems = ({data, accordian, setShowIndex})=>{

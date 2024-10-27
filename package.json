@@ -5,8 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "jest",
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "start": "parcel index.html"
   },
   "author": "Harshit Choudhary",
   "license": "ISC",
